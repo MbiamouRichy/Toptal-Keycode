@@ -856,4 +856,9 @@ main .card-group {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
+
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
