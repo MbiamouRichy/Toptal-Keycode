@@ -9,7 +9,7 @@ document.body.addEventListener('keydown', (e) =>{
                     <p class="text-white text-center">event.key</p>
                 </div>
                 <div class="div2">
-                    <p>${e.key}</p>
+                    <p>${e.key  === ' ' ? 'space' : e.key}</p>
                 </div>
             </div>
             <div class="card">
