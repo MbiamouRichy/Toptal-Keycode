@@ -4,9 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page web pour refaire le site sur les keycode">
+    <meta name="author" content="MbiamouRichy">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <title>Javascript Event Keycode</title>
 </head>
-<body>
-    
+<body class="font-sans bg-primary-0 h-screen flex flex-col items-center justify-between overflow-x-hidden">
+    <!------- Logo ------->
+    <div class="w-full flex flex-row items-center justify-between lg:px-7 py-4">
+        <svg class="ml-3" width="30" height="30" viewBox="0 0 51 41" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.4673 35.4C14.2033 34.12 14.6833 32.712 14.9073 31.176C15.1313 29.608 15.2913 28.28 15.3873 27.192C15.5153 26.072 15.6273 24.696 15.7233 23.064C15.8193 21.4 15.8993 19.896 15.9633 18.552C16.2193 13.176 16.3953 9.672 16.4913 8.04C15.7233 8.104 14.7473 8.136 13.5633 8.136C11.6433 8.136 10.6833 6.888 10.6833 4.392C10.6833 3.304 10.7793 2.344 10.9713 1.512C13.4033 2.088 16.3153 2.376 19.7073 2.376C23.0993 2.376 26.6353 1.8 30.3153 0.647999C30.1233 2.6 29.4353 4.12 28.2513 5.208C27.0673 6.264 25.8673 6.904 24.6513 7.128L23.1633 7.416C22.5553 13.784 22.1233 18.744 21.8673 22.296C21.6113 25.848 21.2113 28.664 20.6673 30.744C20.1553 32.824 19.5313 34.488 18.7953 35.736C18.0593 36.984 17.1953 37.992 16.2032 38.76C15.2113 39.528 14.2193 40.04 13.2273 40.296C12.2353 40.584 11.1313 40.728 9.91525 40.728C6.93925 40.728 4.66725 39.864 3.09925 38.136C1.53125 36.408 0.74725 34.568 0.74725 32.616C0.74725 30.632 1.29125 29.08 2.37925 27.96C3.43525 26.808 4.95525 26.232 6.93925 26.232C7.93125 26.232 8.85925 26.488 9.72325 27C8.89125 27.704 8.23525 28.616 7.75525 29.736C7.30725 30.856 7.08325 31.992 7.08325 33.144C7.08325 34.296 7.37125 35.272 7.94725 36.072C8.55525 36.872 9.45125 37.272 10.6353 37.272C11.8193 37.272 12.7633 36.648 13.4673 35.4ZM42.007 14.136C41.111 14.136 40.311 14.44 39.607 15.048C38.903 15.624 38.551 16.456 38.551 17.544C38.551 18.632 38.919 19.656 39.655 20.616C40.423 21.576 41.351 22.424 42.439 23.16C43.527 23.864 44.615 24.6 45.703 25.368C46.823 26.104 47.799 27.032 48.631 28.152C49.463 29.24 49.927 30.456 50.023 31.8C50.023 34.104 49.031 36.04 47.047 37.608C45.063 39.176 42.599 39.96 39.655 39.96C36.711 39.96 34.391 39.368 32.695 38.184C31.031 37 30.199 35.64 30.199 34.104C30.199 32.568 30.663 31.336 31.591 30.408C32.551 29.448 33.735 28.968 35.143 28.968C35.879 28.968 36.567 29.096 37.207 29.352C36.183 30.44 35.671 31.592 35.671 32.808C35.671 34.024 36.007 35 36.679 35.736C37.351 36.472 38.263 36.84 39.415 36.84C40.567 36.84 41.527 36.552 42.295 35.976C43.095 35.368 43.495 34.6 43.495 33.672C43.495 32.712 43.223 31.864 42.679 31.128C42.135 30.392 41.447 29.752 40.615 29.208C39.815 28.632 38.935 27.992 37.975 27.288C37.015 26.584 36.119 25.88 35.287 25.176C34.487 24.44 33.815 23.528 33.271 22.44C32.727 21.32 32.455 20.104 32.455 18.792C32.455 16.52 33.383 14.664 35.239 13.224C37.127 11.752 39.463 11.016 42.247 11.016C45.063 11.016 47.111 11.56 48.391 12.648C49.703 13.736 50.359 15.016 50.359 16.488C50.359 17.928 49.895 19.16 48.967 20.184C48.071 21.208 46.903 21.72 45.463 21.72C44.759 21.72 43.959 21.576 43.063 21.288C43.767 20.68 44.311 19.992 44.695 19.224C45.079 18.424 45.271 17.64 45.271 16.872C45.271 16.104 44.951 15.464 44.311 14.952C43.671 14.408 42.903 14.136 42.007 14.136Z" fill="white"/>
+        </svg>
+
+        <button class="border mr-3 border-secondary-0 rounded-lg text-lg text-secondary-0 py-1 px-5">Table</button>
+    </div>
+    <main id="main" class="p-2 lg:p-20 lg:mt-auto w-full flex-col md:flex-row justify-end">
+        <!-- <h1>15</h1>
+        <div class="card-group">
+            <div class="card">
+                <div class="div1">
+                    <p class="text-white text-center">event.key</p>
+                </div>
+                <div class="div2">
+                    <p>Enter</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="div1">
+                    <p>event.location</p>
+                    <p class="p-left">(?)</p>
+                </div>
+                <div class="div2">
+                    <p>0</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="div1">
+                    <p>event.which</p>
+                    <p class="p-left">(?)</p>
+                </div>
+                <div class="div2">
+                    <p>13</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="div1">
+                    <p>event.code</p>
+                </div>
+                <div class="div2">
+                    <p>Enter</p>
+                </div>
+            </div>
+           
+        </div> -->
+        <div class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-3/4 px-5 py-3 bg-tertiaire-0">
+            <p class="text-3xl text-center">Press any key to get the javascript keycode</p>
+        </div>
+    </main>
+    <!------ Pied de page -->
+     <div class="flex justify-center items-center py-4">
+        <p class="text-white text-center font-bold text-sm md:text-xl">Made with love by <a class="text-cyan-800" href="http://bento.me/mbiamourichy-">Mbiamou Richy</a><span class="bg-white inline-block mx-3 relative lg:top-2 rotate-90 w-0.5 h-5">&nbsp;</span> fork or suggest on Github.</p>
+     </div>
+  <script src="script.js"></script>
 </body>
 </html>
